@@ -13,6 +13,8 @@
 		1E6C06DA1E6A956200729CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C06D91E6A956200729CC9 /* Assets.xcassets */; };
 		1E6C06DD1E6A956200729CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C06DB1E6A956200729CC9 /* LaunchScreen.storyboard */; };
 		1E6C06E71E6A966B00729CC9 /* SwiftActor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C06E61E6A966B00729CC9 /* SwiftActor.framework */; };
+		1EE3D49E1E6AB31A0051FEB0 /* MessageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3D49D1E6AB31A0051FEB0 /* MessageRepository.swift */; };
+		1EE3D4A01E6AB5390051FEB0 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE3D49F1E6AB5390051FEB0 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		1E6C06DC1E6A956200729CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E6C06DE1E6A956200729CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E6C06E61E6A966B00729CC9 /* SwiftActor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftActor.framework; path = Carthage/Build/iOS/SwiftActor.framework; sourceTree = "<group>"; };
+		1EE3D49D1E6AB31A0051FEB0 /* MessageRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageRepository.swift; sourceTree = "<group>"; };
+		1EE3D49F1E6AB5390051FEB0 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 				1E6C06D91E6A956200729CC9 /* Assets.xcassets */,
 				1E6C06DB1E6A956200729CC9 /* LaunchScreen.storyboard */,
 				1E6C06DE1E6A956200729CC9 /* Info.plist */,
+				1EE3D49D1E6AB31A0051FEB0 /* MessageRepository.swift */,
+				1EE3D49F1E6AB5390051FEB0 /* Message.swift */,
 			);
 			path = SampleChat;
 			sourceTree = "<group>";
@@ -166,7 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6C06D51E6A956200729CC9 /* ViewController.swift in Sources */,
+				1EE3D4A01E6AB5390051FEB0 /* Message.swift in Sources */,
 				1E6C06D31E6A956200729CC9 /* AppDelegate.swift in Sources */,
+				1EE3D49E1E6AB31A0051FEB0 /* MessageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +342,7 @@
 				1E6C06E31E6A956200729CC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
