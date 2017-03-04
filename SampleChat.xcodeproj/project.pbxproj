@@ -12,6 +12,7 @@
 		1E6C06D81E6A956200729CC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C06D61E6A956200729CC9 /* Main.storyboard */; };
 		1E6C06DA1E6A956200729CC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C06D91E6A956200729CC9 /* Assets.xcassets */; };
 		1E6C06DD1E6A956200729CC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6C06DB1E6A956200729CC9 /* LaunchScreen.storyboard */; };
+		1E6C06E71E6A966B00729CC9 /* SwiftActor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6C06E61E6A966B00729CC9 /* SwiftActor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		1E6C06D91E6A956200729CC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E6C06DC1E6A956200729CC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E6C06DE1E6A956200729CC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E6C06E61E6A966B00729CC9 /* SwiftActor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftActor.framework; path = Carthage/Build/iOS/SwiftActor.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E6C06E71E6A966B00729CC9 /* SwiftActor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				1E6C06D11E6A956200729CC9 /* SampleChat */,
 				1E6C06D01E6A956200729CC9 /* Products */,
+				1E6C06E51E6A966B00729CC9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +68,14 @@
 			path = SampleChat;
 			sourceTree = "<group>";
 		};
+		1E6C06E51E6A966B00729CC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E6C06E61E6A966B00729CC9 /* SwiftActor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +86,7 @@
 				1E6C06CB1E6A956200729CC9 /* Sources */,
 				1E6C06CC1E6A956200729CC9 /* Frameworks */,
 				1E6C06CD1E6A956200729CC9 /* Resources */,
+				1E6C06E41E6A963400729CC9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -129,6 +142,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E6C06E41E6A963400729CC9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftActor.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E6C06CB1E6A956200729CC9 /* Sources */ = {
@@ -257,6 +287,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftActor.SampleChat;
@@ -269,6 +303,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = SampleChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftActor.SampleChat;
